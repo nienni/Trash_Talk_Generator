@@ -1,0 +1,60 @@
+<form action="/" method="POST">
+  <div class="card-deck">
+    <div class="card">
+      <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+        class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">工程師</h5>
+      </div>
+      <div class="card-footer">
+        <div class="form-check">
+          <input class="form-check-input position-static" type="checkbox" name="engineer" id="engineer"
+            {{#if options.engineer}} checked {{/if}}>
+          <small class="text-muted">對他講幹話？</small>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+        class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">設計師</h5>
+      </div>
+      <div class="card-footer">
+        <div class="form-check">
+          <input class="form-check-input position-static" type="checkbox" name="designer" id="designer"
+            {{#if options.designer}} checked {{/if}}>
+          <small class="text-muted">對他講幹話？</small>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+        class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">創業家</h5>
+      </div>
+      <div class="card-footer">
+        <div class="form-check">
+          <input class="form-check-input position-static" type="checkbox" name="entrepreneur" id="entrepreneur"
+            {{#if options.entrepreneur}} checked {{/if}}>
+          <small class="text-muted">對他講幹話？</small>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card text-center">
+    <div class="card-body">
+      <h5 class="card-title">我想想幹話...</h5>
+      <p class="card-text">
+        {{#if trashTalk}}
+        <div class="alert alert-info" role="alert">
+          <span class="mr-2">對他說:</span> <code>{{trashTalk}}</code>
+        </div>
+        {{/if}}
+      </p>
+      <button class="btn btn-success" type="submit">Generate Trash Talk</button>
+    </div>
+  </div>
+  </div>
+</form>
